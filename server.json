@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.allscale/mcp",
+  "title": "AllScale",
+  "description": "Let AI assistants work in an AllScale business account: balances, invoices, checkout links, payouts.",
+  "version": "1.0.0",
+  "websiteUrl": "https://www.allscale.io/mcp",
+  "repository": {
+    "url": "https://github.com/allscale-io/allscale-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.allscale.io/mcp"
+    }
+  ]
+}
