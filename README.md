@@ -9,7 +9,7 @@
 
 AllScale MCP is a remote Model Context Protocol service that connects a compatible AI assistant to your AllScale merchant account. Ask it to check balances, look up transactions, manage invoices and claim links, create checkout links and prepare payments in plain language.
 
-AllScale is a stablecoin payments account for businesses. Merchants get paid in USDT and USDC through invoices, checkout links and Claim Links, and pay vendors and contractors from the same wallet.
+AllScale is a global dollar account for businesses, with balances held and settled in USDC and USDT. Merchants get paid through invoices, checkout links and Claim Links, and pay vendors and contractors from the same account.
 
 This repository holds the public information for the hosted AllScale MCP server. The server itself is operated by AllScale; there is nothing to install or run locally.
 
@@ -138,6 +138,8 @@ The server provides 15 tools. Each tool operates within the permissions granted 
 - **Permissions you choose.** Read-only access cannot change records. Reconnect to grant additional permissions.
 - **You approve payments.** Payment tools create a pending action. Funds move only after you approve in AllScale with your passkey.
 - **Disconnect at any time.** Review or remove connections in AllScale under Settings → Connected AI apps.
+- **Licensed and registered.** AllScale holds a Money Service Operator (MSO) licence in Hong Kong, is registered as a Money Services Business (MSB) with FINTRAC in Canada, and screens transactions with built-in AML checks.
+- **Report a security issue.** Email tianying@allscale.io. See [SECURITY.md](SECURITY.md).
 
 ## Troubleshooting
 
