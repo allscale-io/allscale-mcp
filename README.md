@@ -9,7 +9,7 @@
 
 AllScale MCP is a remote Model Context Protocol service that connects a compatible AI assistant to your AllScale merchant account. Ask it to check balances, look up transactions, manage invoices and claim links, create checkout links and prepare payments in plain language.
 
-AllScale is a global dollar account for businesses, with balances held and settled in USDC and USDT. Merchants get paid through invoices, checkout links and Claim Links, and pay vendors and contractors from the same account.
+AllScale provides businesses with a global dollar account, with balances held and settled in USDC and USDT. Merchants get paid through invoices, checkout links and Claim Links, and pay vendors and contractors from the same account.
 
 This repository holds the public information for the hosted AllScale MCP server. The server itself is operated by AllScale; there is nothing to install or run locally.
 
@@ -76,6 +76,29 @@ Open Experts · Skills · Connectors → Connectors, click the edit button in th
 ```
 
 Save, then click **Connect** next to allscale.
+
+**Hermes Agent**
+
+Install the package, enable it, then add the server to your profile's config so Hermes can run the sign-in:
+
+```bash
+hermes plugins install allscale-io/allscale-mcp --no-enable
+hermes plugins enable allscale
+```
+
+```yaml
+mcp_servers:
+  allscale:
+    url: https://mcp.allscale.io/mcp
+    auth: oauth
+    trust: untrusted
+```
+
+```bash
+hermes mcp login allscale
+```
+
+The package holds only the server URL, with no executable code and no stored credentials. Hermes keeps the sign-in token.
 
 **Authorize**
 

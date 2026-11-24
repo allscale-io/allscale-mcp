@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "allscale",
+  "version": "1.0.0",
+  "description": "Work in the business dollar account that AllScale provides, through the hosted AllScale MCP server: balances, transactions, invoices, checkout links and payouts you approve with your passkey.",
+  "author": {
+    "name": "AllScale",
+    "email": "tianying@allscale.io",
+    "url": "https://www.allscale.io"
+  },
+  "homepage": "https://www.allscale.io/mcp",
+  "repository": "https://github.com/allscale-io/allscale-mcp",
+  "license": "MIT",
+  "keywords": [
+    "allscale",
+    "payments",
+    "invoicing",
+    "payouts",
+    "stablecoin",
+    "mcp",
+    "oauth"
+  ],
+  "extensions": {
+    "com.nousresearch.hermes": {
+      "servers": {
+        "allscale": {
+          "trust": "untrusted"
+        }
+      }
+    }
+  }
+}
