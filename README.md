@@ -60,6 +60,24 @@ Add AllScale as a remote server in your client's MCP configuration:
 
 Configuration location and prompts vary by client.
 
+**Kiro**
+
+[![Add to Kiro](https://kiro.dev/images/add-to-kiro.svg)](https://kiro.dev/launch/mcp/add?name=allscale&config=%7B%22url%22%3A%22https%3A%2F%2Fmcp.allscale.io%2Fmcp%22%7D)
+
+Click the button and confirm in Kiro, or add the server to `~/.kiro/settings/mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "allscale": {
+      "url": "https://mcp.allscale.io/mcp"
+    }
+  }
+}
+```
+
+Kiro opens the AllScale sign-in in your browser the first time it connects. To add the usage guidance as well, install this repository as a Power: Powers → Add Custom Power → Import power from GitHub, then enter `https://github.com/allscale-io/allscale-mcp`.
+
 **WorkBuddy**
 
 Open Experts · Skills · Connectors → Connectors, click the edit button in the top-right corner, then click **Add MCP** and add:

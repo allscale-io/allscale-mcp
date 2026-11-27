@@ -13,14 +13,16 @@ AllScale provides businesses with a global dollar account, with balances held an
 
 ## Connect
 
-The tools come from AllScale's hosted MCP server at `https://mcp.allscale.io/mcp` (Streamable HTTP, OAuth). No API key is needed. If the AllScale tools are not available, ask the user to run:
+The tools come from AllScale's hosted MCP server at `https://mcp.allscale.io/mcp` (Streamable HTTP, OAuth). No API key is needed. If the AllScale tools are not available, ask the user to add the server URL as a remote MCP server in their client and sign in. Setup steps for each client are in the README at https://github.com/allscale-io/allscale-mcp.
+
+In OpenClaw, the user runs:
 
 ```bash
 openclaw mcp set allscale '{"url":"https://mcp.allscale.io/mcp","transport":"streamable-http","auth":"oauth"}'
 openclaw mcp login allscale
 ```
 
-The second command prints a sign-in link. The user signs in to AllScale in the browser, then chooses one merchant account, an optional checkout store and the permissions to grant. Check the connection with `openclaw mcp doctor allscale --probe`.
+At sign-in, the user signs in to AllScale in the browser, then chooses one merchant account, an optional checkout store and the permissions to grant.
 
 The user needs an AllScale account, which businesses open at https://www.allscale.io. Connections can be removed in AllScale under Settings → Connected AI apps.
 
@@ -52,4 +54,4 @@ Payment preparation (passkey approval):
 - Before any write or payment tool, show the user the details (recipient, amount, asset, network, due date) and get a clear yes.
 - Payment tools only create a pending action. Funds move only after the merchant approves it in AllScale with a passkey. Never tell the user a payment was sent until `pending_action_status` confirms it.
 - Never ask for or handle private keys, seed phrases, passwords or one-time codes. AllScale does not need them.
-- If a tool reports missing permission, call `whoami`, tell the user which permission is missing, and ask them to reconnect with `openclaw mcp login allscale`.
+- If a tool reports missing permission, call `whoami`, tell the user which permission is missing, and ask them to sign in again and grant it.
