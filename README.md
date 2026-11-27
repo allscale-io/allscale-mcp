@@ -78,6 +78,23 @@ Click the button and confirm in Kiro, or add the server to `~/.kiro/settings/mcp
 
 Kiro opens the AllScale sign-in in your browser the first time it connects. To add the usage guidance as well, install this repository as a Power: Powers → Add Custom Power → Import power from GitHub, then enter `https://github.com/allscale-io/allscale-mcp`.
 
+**Cline**
+
+In the MCP Servers panel, open **Configure** → **Configure MCP Servers** and add AllScale to `cline_mcp_settings.json`:
+
+```json
+{
+  "mcpServers": {
+    "allscale": {
+      "type": "streamableHttp",
+      "url": "https://mcp.allscale.io/mcp"
+    }
+  }
+}
+```
+
+Set `type` to `streamableHttp`; without it Cline uses the legacy SSE transport. Cline then opens the AllScale sign-in in your browser.
+
 **WorkBuddy**
 
 Open Experts · Skills · Connectors → Connectors, click the edit button in the top-right corner, then click **Add MCP** and add:
