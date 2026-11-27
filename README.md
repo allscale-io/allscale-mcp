@@ -100,6 +100,15 @@ hermes mcp login allscale
 
 The package holds only the server URL, with no executable code and no stored credentials. Hermes keeps the sign-in token.
 
+**OpenClaw**
+
+```bash
+openclaw mcp set allscale '{"url":"https://mcp.allscale.io/mcp","transport":"streamable-http","auth":"oauth"}'
+openclaw mcp login allscale
+```
+
+The second command prints a sign-in link. The [AllScale skill](skills/allscale/SKILL.md) on ClawHub adds usage guidance for the agent.
+
 **Authorize**
 
 Your client opens a browser window. Sign in to AllScale, then choose your merchant, an optional checkout store, and the permissions to grant. Start with read-only permissions if you only need balances, transactions and existing records.
